@@ -72,7 +72,18 @@ Question examen: Comment appeller une macro? Comment afficher une chaine de cara
 
 ### 1.3 Hello, Cargo!
 
-test
+"cargo new": créer un projet
 
+"cargo build": compile le projet
+
+"cargo run": compile et lance l'éxécutable
+
+"cargo check": compile le projet sans transformation en binaire pour vérifier les erreurs
+
+"cargo build --release": créer un dossier release avec un éxecutable si on veut livrer une version stable
+
+Question examen : Quels sont les différentes commandes cargo?
+
+## Chapitre 2: Programmer le jeu du plus ou du moins
 
 
