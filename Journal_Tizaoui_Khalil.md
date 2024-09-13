@@ -86,4 +86,60 @@ Question examen : Quels sont les différentes commandes cargo?
 
 ## Chapitre 2: Programmer le jeu du plus ou du moins
 
+Les variables sont immuables par défaut en Rust, mettre "let mut x" pour la rendre muttables.
+
+"io::stdin().read_line(&mut supposition).expect("Échec de la lecture de l'entrée utilisateur");" 
+
+stdin() va nous permettre de nous renvoyer vers l'entrée du terminal 
+
+.read_line()va nous permettre de récupérer la saisie de cette entrée du terminal
+
+"&" l'argument est une référence
+
+les références sont immuables par défaut
+
+.read_line() retourne une valeur de type "io::Result"
+
+Les types Result sont des enums(énumérations) qui sont souvent utilisés avec des match, Result sert à récupérer des informations pour la gestion d'erreurs (Ok ou Err)
+
+"println!("Votre nombre : {}", supposition);" {} est un espace réservé pour la variable. S'il y'avait "{} {}, x, y" x irait la première et y dans la deuxième, système qui s'incrémente.
+
+lorsqu'on rajoute par ex "rand = "0.8.3" dans les dépendances et qu'on build ça télécharge la crate rand et celles dont elle à besoin pour fonctionner
+
+le fichier cargo lock permet a cargo de connaître les versions des dépendances du projet et de ne pas toujours allez chercher les versions jusqu'ç qu'on le change nous même
+
+"cargo update": permet de mettre à jour les dépendences comme ceci 0.8.X
+il ne montera pas en version 0.9.0 pour avoir la version 0.9.0 il faut modifier cargo.toml
+
+"let nombre_secret = rand::thread_rng().gen_range(1..101)" rand::thread_rng() nous permet d'appeller le générateur de nb aléatoires qui est dans le crate rand et .gen_range nous permet de génerer un intervalle de nombre pour le générateur aléatoires.
+
+Less (inférieur), Greater (supérieur) et Equal (égal)
+
+"match" permet de comparer une valeur avec d'autres valeurs et d'ensuite faire une action, avec des branches qui sont parcourus à tour de rôle si la valeur est la même que le motif on rentre dans cette branche
+
+En rust on peut masquer une valeur en la réaffectant (shadowing)
+
+"u32" = chaines constitué que de chiffre
+
+.trim() : enleve les whitespace et les saut de ligne \n
+
+.parse() : parse la chaîne de caractères dans le format spécifier ex: " let supposition: u32 = supposition.trim().parse()" va parser en u32. Elle ne  peut parser que sur des nombres donc il faut gérer les erreurs car part facilement en erreur
+
+"break" permet de quitter la boucle
+
+"continue" permet de continuer le programme même si ce qu'on a rentrer n'est pas au bon format
+
+Question: Qu'est ce qu'une variable immuable et une variable mutables ? Qu'est ce qu'une référence ? "
+
+Question examen: Comment récupérer l'entrée d'un utilisateur ? Qu'est ce que io::stdin().read_line() ?
+
+A Quoi servent les références ? A quoi sert cargo lock? A quoi sert match? A quoi Sert trim() ? Qu'est ce qu'u32 ? Qu'est ce que parse ? A quoi sert break ?
+
+
+## Chapitre 3: Les concepts courants de programmation
+
+
+
+
+
 
