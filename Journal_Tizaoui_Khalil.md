@@ -140,6 +140,11 @@ A Quoi servent les références ? A quoi sert cargo lock? A quoi sert match? A q
 
 ### 3.1 Les variables et la mutabilité 
 
+variable immuable : valeur liée au nom et qui ne peut pas être changé
+
+valeur muttable : valeur que l'on peut changer lorsqu'on le souhaite suffit de rajouter "mut" avant le nom de la variable lors de sa création
+
+constante : déclaré par "const" ce sont des variables immuables qui sont toujours immuables, qui peuvent être définis par une expression constante et non par le résultat d'une valeur calculé qu'a l'exécution
 
 
 
