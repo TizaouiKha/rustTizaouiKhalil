@@ -138,7 +138,7 @@ A Quoi servent les références ? A quoi sert cargo lock? A quoi sert match? A q
 
 ## Chapitre 3: Les concepts courants de programmation
 
-
+### 3.1 Les variables et la mutabilité 
 
 
 
