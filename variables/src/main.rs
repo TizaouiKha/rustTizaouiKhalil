@@ -1,6 +1,36 @@
 fn main() {
-    let mut x = 5;
-    println!("La valeur de x est : {}", x);
-    x = 6;
-    println!("La valeur de x est : {}", x);
+    let gifts = [
+        "a partridge in a pear tree",
+        "Two turtle doves",
+        "Three French Hens",
+        "Four calling birds",
+        "Five golden rings",
+        "Six geese a-laying",
+        "Seven swans a-swimming",
+        "Eight maids a-milking",
+        "Nine ladies dancing",
+        "Ten lords a-leaping",
+        "Eleven pipers piping",
+        "Twelve drummers drumming",
+    ];
+
+    let days = [
+        "first", "second", "third", "fourth", "fifth", "sixth", 
+        "seventh", "eighth", "ninth", "tenth", "eleventh", "twelfth",
+    ];
+
+    for day in 0..12 {
+        println!("On the {} day of Christmas, my true love sent to me", days[day]);
+        
+        for gift in (0..=day).rev() {
+            if gift == day {
+                println!("{}", gifts[gift]);
+            } else if gift == 0 && day != 0 {
+                println!("and {}", gifts[gift]);
+            } else {
+                println!("{},", gifts[gift]);
+            }
+        }
+        println!(); 
+    }
 }
