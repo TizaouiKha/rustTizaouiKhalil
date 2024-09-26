@@ -144,7 +144,117 @@ variable immuable : valeur liée au nom et qui ne peut pas être changé
 
 valeur muttable : valeur que l'on peut changer lorsqu'on le souhaite suffit de rajouter "mut" avant le nom de la variable lors de sa création
 
-constante : déclaré par "const" ce sont des variables immuables qui sont toujours immuables, qui peuvent être définis par une expression constante et non par le résultat d'une valeur calculé qu'a l'exécution
+constante : déclaré par "const" ce sont des variables immuables qui sont toujours immuables, qui peuvent être définis par une expression constante et non par le résultat d'une valeur calculé qu'a l'exécution. 
 
+Masquage : permet de redéfinir une variable existante en utilisant let ( ex : 
+
+    let x = 2;
+    let x = x +1;
+)
+)
+
+La nouvelle variable masque l'ancienne et permet de modifier la valeur sans avoir a déclarer la valeur comme mutable ou même le type de la valeur.
+
+### 3.2 Les types de données
+
+Types scalaires: 
+-entiers: 8,16,32,64,128 bits et archi en focntion de l'architechture du pc, les littéraux d'entiers (Décimal, HexaDecimal, Binaire, Octal, Octet).
+
+-nombres à virgules flottantes: nombres décimaux (f32 ou f64)
+
+-les booléens: true ou false
+
+-les caractères: char ( stocke des caractères Unicode sur 4 octets et également des emoji et symboles internationaux)
+
+-opérations numériques: addition, soustraction, multiplication, division et modulo
+
+
+Types composés:
+
+-tuples: combiner des valeurs de différents types. (la taille d'un tuple est fixe) ex:(
+
+    let tup: (i32, f64, u8) = (500, 6.4, 1);
+    i32, f64  et u8 sont les valeurs des différentes variables
+)
+
+-tableaux: contiennent des valeurs du même type. ( la taille est fixe) ex:(
+
+    let a: [i32; 5] = [1, 2, 3, 4, 5];
+    i32 est le type des valeurs et 5 est la taille est 5
+)
+
+### 3.3 Les fonctions
+
+Les fonctions sont déclarés avec "fn" ex(
+
+    fn printHelloWorld() {
+        println!("Hello World!");
+    }
+)
+les valeurs sont définies dans la signature de la fonction ex(
+
+    fn totoTata(toto: i32, tata: char) {
+        println!("Toto est : {}; Tata est : {}", toto, tata);
+    }
+)
+
+Instructions et Expressions <br>
+Une instruction est une action qui ne retournent pas de valeur. <br>
+let x = 5 est une instruction
+
+Une expression est évaluée pour produire une valeur ex( 2+2, appels de fonctions ou macros), les expressions ne se termine pas par un point virgule sinon cela devient des instructions.
+
+Fonction qui retourne une valeur se défini commme ça ex(
+
+    fn cinq() -> i32 {
+        5
+    }
+)
+
+### 3.4 Les commentaires
+
+Afin de commenter il suffit d'utiliser //, ils peuvent être utiliser sur la même ligne que le code ou au dessus également en dessous. Afin de faire des commenttaires multi-ligne utiliser // a chaque debut de ligne
+
+
+### 3.5 Les structures de contrôle
+
+Expressions If: Les conditions if doivent toujours avoir une condition booléenne ! et on peut assigner le résultat d'une expression if à une variable mais elle doivent être du même type ex(
+
+     let nombre = if condition { 5 } else { "six" }; ne fonctionnera pas car le else est un char.
+)
+ Sinon cela fonctionne comme java/javascript etc..
+
+Boucles:<br>
+-loop: créer une boucle infinie qu'on peut arrêter avec break ou continue pour passer à l'itération suivante. On peut assigner le resultat de la loop à une variable ex(
+
+    let mut compteur = 0;
+
+    let resultat = loop {
+        compteur += 1;
+
+        if compteur == 10 {
+            break compteur * 2;
+        }
+        }
+)
+
+-while: exécute le bloc de code tant que la condition est vraie. ex(
+     let mut nombre = 3;
+
+    while nombre != 0 {
+        println!("{} !", nombre);
+
+        nombre -= 1;
+    }
+)
+
+-for : permet d'itérer sur une collection d'éléments et est beaucoup utilisé pour ça, un intervale (Range) ou tout type d'objets itérable ex(
+
+    let a = [10, 20, 30, 40, 50];
+
+    for element in a {
+        println!("La valeur est : {}", element);
+    }
+)
 
 
